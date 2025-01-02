@@ -63,11 +63,8 @@
 ## How to Install
 - drag the folder inside the release's zip into ```<game install folder>\GDWeave\mods```
 
-## Important future features
-- LureKit, an in-game editor to make basic Lure mods easily without having to decompile the game.
-
 ## Development
-if your mod depends on Lure in any way, make sure to add ``"Sulayre.Lure"`` to the ``"Dependencies"`` array of your mod's manifest.json like this:
+if your mod depends on Lure in any way, make sure to add ``"TeamLure.Lure"`` to the ``"Dependencies"`` array of your mod's manifest.json like this:
 
 ``dependencies: ["Sulayre.Lure"]``
 
