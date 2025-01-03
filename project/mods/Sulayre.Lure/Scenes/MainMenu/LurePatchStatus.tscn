@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Themes/accid___.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 28
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 2
+font_data = ExtResource( 1 )
+
+[node name="Status" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = 1023.0
+margin_right = -1599.0
+margin_bottom = 8.0
+
+[node name="Holder" type="Panel" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -60.0
+margin_right = 245.0
+rect_scale = Vector2( 1.40431, 1.40431 )
+rect_pivot_offset = Vector2( 1.42419, 59.816 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="statusTXT" type="RichTextLabel" parent="Holder"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 11.3935
+margin_top = -43.6968
+margin_right = 455.394
+margin_bottom = -5.69684
+rect_scale = Vector2( 0.764207, 0.764207 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[wave][color=lime][LURE STATUS = RUNNING]"
+text = "[LURE STATUS = RUNNING]"

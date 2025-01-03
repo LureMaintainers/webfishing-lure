@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://mods/Sulayre.Lure/Scenes/MainMenu/LobbySettings.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Textures/UI/knot_sep2.png" type="Texture" id=3]
+
+[node name="MapSelector" type="Panel"]
+margin_left = 383.0
+margin_top = 250.0
+margin_right = 1536.0
+margin_bottom = 347.0
+
+[node name="LureSettings" parent="." instance=ExtResource( 1 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -197.5
+margin_top = -32.5
+margin_right = 197.5
+margin_bottom = 1.5
+
+[node name="sep" type="TextureRect" parent="."]
+anchor_top = 0.0380659
+anchor_right = 1.0
+anchor_bottom = 0.12037
+margin_top = 51.4774
+margin_bottom = 75.4939
+rect_min_size = Vector2( 0, 32 )
+size_flags_horizontal = 3
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 4

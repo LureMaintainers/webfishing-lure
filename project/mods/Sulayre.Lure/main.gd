@@ -10,6 +10,8 @@ const _modules = {
 }
 
 const prompt = preload("res://mods/Sulayre.Lure/Scenes/MainMenu/BonusContentPrompt.tscn")
+const lurepatch = preload("res://mods/Sulayre.Lure/Scenes/MainMenu/LurePatchStatus.tscn")
+
 const SUPPORTED_GAME_VER := 1.12
 
 var Patches
@@ -103,6 +105,8 @@ signal mod_map_loaded
 
 var dir = Directory.new()
 var bonus_prompt = false
+
+var status = true
 
 var loaded_cosmetics = []
 var loaded_items = []
@@ -993,11 +997,22 @@ func _signals():
 	connect("main_menu_enter",self,"_load_and_link_saves",[],CONNECT_ONESHOT)
 	connect("world_enter",Mapper,"_load_map")
 
+func add_status(node):
+	if lurepatch: node.add_child(lurepatch.instance())
+
+func change_status(status, node):
+	if node.name == "main_menu":
+		var patchUI : Sprite = node.get_node("Status/Holder/statusTXT")
+		patchUI.text = status
+
 func _on_enter(node:Node):
 	if node.name == "main_menu":
+		
+		add_status(node)
 		if Globals.GAME_VERSION != SUPPORTED_GAME_VER:
 			PopupMessage._show_popup("Lure has not been updated to support this version\nof the game so you'll have to wait for a hotfix\nfor some of your installed mods to work.\n(this is so your save doesn't possibly corrupt)\n\nIf you find any issues after the hotfix is\nout please report it on GitHub, thank you!")
 			return
+		
 		if bonus_prompt: node.add_child(prompt.instance())
 		Mapper.selected_map = null
 		
@@ -1007,11 +1022,11 @@ func _on_enter(node:Node):
 		# first we setup the map selector and the max player selector
 		var mainmenu = get_tree().get_current_scene()
 		
-		var buttonbundle = preload("res://mods/Sulayre.Lure/Scenes/MainMenu/LobbySettings.tscn").instance()
+		var buttonbundle = preload("res://mods/Sulayre.Lure/Scenes/HUD/MapSelector.tscn").instance()
 		
-		var options:OptionButton = buttonbundle.get_node("map")
+		var options:OptionButton = buttonbundle.get_node("LureSettings/map")
 
-		var container:HBoxContainer = mainmenu.get_node("lobby_browser/Panel/code_join/HBoxContainer/")
+		var container = mainmenu.get_node("create_lobby_menu")
 		container.add_child(buttonbundle)
 
 		options.connect("item_selected",Mapper,"_swap_map")
