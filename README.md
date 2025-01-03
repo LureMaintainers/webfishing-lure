@@ -2,6 +2,12 @@
   <img src="https://raw.githubusercontent.com/Sulayre/WebfishingLure/refs/heads/main/icon.png" alt="Lure Shrimp"/>
 </p>
 
+## 4.3.0
+- Update Lure's supported game version.
+- Fixed issues with SteamNetwork.
+- Changed the Map Selector position to be in the Create Lobby section.
+- Added a Status to the Main Menu to indicate Lure Running.
+
 ## 4.2.2
 - Modded map spawn positions now work properly (kitty-girl on GitHub)
 - Void Portals no longer crash modded maps that don't contain a spawn position for them (kitty-girl on GitHub)
