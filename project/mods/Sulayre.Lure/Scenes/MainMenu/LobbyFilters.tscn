@@ -6,6 +6,7 @@
 [ext_resource path="res://mods/Sulayre.Lure/Assets/Textures/checkbox1.png" type="Texture" id=4]
 [ext_resource path="res://mods/Sulayre.Lure/Assets/Textures/checkbox2.png" type="Texture" id=5]
 
+
 [node name="LobbyFilters" type="HBoxContainer"]
 anchor_left = 0.0141292
 anchor_top = 0.370185

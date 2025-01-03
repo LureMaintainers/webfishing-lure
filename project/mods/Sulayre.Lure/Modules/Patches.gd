@@ -2,7 +2,7 @@ extends Node
 var Lure:Node
 
 const BODY_COLORS_SHADER = preload("res://mods/Sulayre.Lure/Resources/Shaders/body_colors_patch.tres")
-const PREFIX = "[LURE/PATCHES]: "
+const PREFIX = "[LURE-REFRESHED/PATCHES]: "
 
 const SAVE_TEMPLATE = {
 	"cosmetics_unlocked":[],

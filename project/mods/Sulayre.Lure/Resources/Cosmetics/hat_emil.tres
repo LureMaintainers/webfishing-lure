@@ -6,6 +6,7 @@
 [ext_resource path="res://mods/Sulayre.Lure/Assets/Textures/hat_icon.png" type="Texture" id=4]
 [ext_resource path="res://mods/Sulayre.Lure/Assets/Textures/hat texture.png" type="Texture" id=5]
 
+
 [sub_resource type="SpatialMaterial" id=4]
 resource_name = "Material.003"
 vertex_color_use_as_albedo = true

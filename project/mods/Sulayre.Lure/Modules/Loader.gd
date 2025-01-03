@@ -1,7 +1,7 @@
 extends Node
 var Lure:Node
 
-const PREFIX = "[LURE/LOADER]: "
+const PREFIX = "[LURE-REFRESHED/LOADER]: "
 
 func _species_loader(id:String,resource:CosmeticResource):
 	if Lure.modded_species.has(id):

@@ -72,7 +72,7 @@ const ID = "Sulayre.Lure"
 const MODS_FOLDER = "res://mods"
 
 const OWN_MOD_PREFIX = "mod://"
-const PREFIX = "[LURE/MAIN]: "
+const PREFIX = "[LURE-REFRESHED/MAIN]: "
 
 const VANILLA_SPECIES = ["species_cat","species_dog"]
 

@@ -1,6 +1,6 @@
 extends Node
 var Lure:Node
-const PREFIX = "[Lure/Util]: "
+const PREFIX = "[LURE-REFRESHED/Util]: "
 func _mod_path_converter(mod_id:String,path:String):
 	if path.begins_with("res://"):
 		return path

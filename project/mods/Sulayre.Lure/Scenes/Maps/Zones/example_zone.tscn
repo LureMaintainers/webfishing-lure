@@ -12,6 +12,7 @@
 [ext_resource path="res://Scenes/Interactables/NPCs/npc_main.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Interactables/NPCs/npc_general.tscn" type="PackedScene" id=16]
 
+
 [sub_resource type="SpatialMaterial" id=3]
 albedo_texture = ExtResource( 3 )
 

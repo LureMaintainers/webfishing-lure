@@ -6,6 +6,7 @@
 [ext_resource path="res://Assets/Models/Cosmetics/rig_main_updated.tres" type="Skin" id=4]
 [ext_resource path="res://Assets/Models/shirt_update.tres" type="ArrayMesh" id=5]
 
+
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 3 )
 

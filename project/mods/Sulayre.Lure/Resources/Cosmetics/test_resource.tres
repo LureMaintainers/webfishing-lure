@@ -3,6 +3,7 @@
 [ext_resource path="res://Resources/Scripts/cosmetic_resource.gd" type="Script" id=1]
 [ext_resource path="res://mods/Sulayre.Lure/Assets/Textures/Gerald.png" type="Texture" id=2]
 
+
 [resource]
 script = ExtResource( 1 )
 name = "cos name"

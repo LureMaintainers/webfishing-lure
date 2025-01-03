@@ -2,7 +2,7 @@ extends Node
 var Lure:Node
 var selected_map
 var player_bodies = []
-const PREFIX = "[LURE/MAPPER]: "
+const PREFIX = "[LURE-REFRESHED/MAPPER]: "
 
 func _refresh_players(node):
 	player_bodies = []

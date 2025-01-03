@@ -4,6 +4,7 @@
 [ext_resource path="res://mods/Sulayre.Lure/Assets/Textures/templategrid_albedo.png" type="Texture" id=2]
 [ext_resource path="res://mods/Sulayre.Lure/Assets/Textures/lurepaint.png" type="Texture" id=3]
 
+
 [sub_resource type="CylinderMesh" id=5]
 top_radius = 0.5
 bottom_radius = 0.5

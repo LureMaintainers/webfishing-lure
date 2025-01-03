@@ -1,7 +1,7 @@
 extends Node
 var Lure:Node
 
-const PREFIX = "[LURE/PRINTER]: "
+const PREFIX = "[LURE-REFRESHED/PRINTER]: "
 
 onready var _logs = {
 		Lure.MOD_NOT_FOUND:"Your mod was not found, make sure the mod_id argument is the same as the name of your mod's folder",

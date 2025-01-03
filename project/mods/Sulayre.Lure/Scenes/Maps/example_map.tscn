@@ -10,6 +10,7 @@
 [ext_resource path="res://mods/Sulayre.Lure/Scenes/Maps/Zones/example_zone.tscn" type="PackedScene" id=10]
 [ext_resource path="res://mods/Sulayre.Lure/Scenes/Maps/exampleEnvironment.gd" type="Script" id=11]
 
+
 [node name="example_map" type="Spatial"]
 script = ExtResource( 5 )
 

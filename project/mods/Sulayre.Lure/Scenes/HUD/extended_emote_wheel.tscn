@@ -15,6 +15,7 @@
 [ext_resource path="res://Assets/Textures/UI/radial_wheel1.png" type="Texture" id=13]
 [ext_resource path="res://Assets/Textures/UI/chat_arrow4.png" type="Texture" id=14]
 
+
 [sub_resource type="StyleBoxEmpty" id=1]
 
 [sub_resource type="Animation" id=2]

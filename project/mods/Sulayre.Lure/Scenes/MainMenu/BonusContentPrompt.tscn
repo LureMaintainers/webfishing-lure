@@ -5,6 +5,7 @@
 [ext_resource path="res://mods/Sulayre.Lure/Assets/Textures/LureLobster.png" type="Texture" id=3]
 [ext_resource path="res://mods/Sulayre.Lure/Scenes/MainMenu/BonusContentPrompt.gd" type="Script" id=4]
 
+
 [node name="BonusContentPrompt" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
