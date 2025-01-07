@@ -48,7 +48,11 @@ namespace Sulayre.Lure.Patches
 					yield return new Token(TokenType.BracketOpen);
 					yield return new ConstantToken(new StringVariant("species"));
 					yield return new Token(TokenType.BracketClose);
-					yield return new Token(TokenType.ParenthesisClose);
+                    yield return new Token(TokenType.Comma);
+                    yield return new IdentifierToken("primary_color");
+                    yield return new Token(TokenType.Comma);
+                    yield return new IdentifierToken("secondary_color");
+                    yield return new Token(TokenType.ParenthesisClose);
 
 					yield return new Token(TokenType.Newline, 2);
 

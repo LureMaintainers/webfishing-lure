@@ -15,23 +15,34 @@ const SAVE_TEMPLATE = {
 
 
 
-func _custom_species_patterns(mesh:MeshInstance,pattern:CosmeticResource,species:String="none"):
+func _custom_species_patterns(mesh:MeshInstance,pattern:CosmeticResource,species:String,primary:Object,secondary:Object):
 	var modded_species:Array = Lure.modded_species
 	var index = modded_species.find(species)
-	print(pattern.body_pattern)
+	# shit fucking hack for any idiot who uses no pattern
+	if pattern.name == "No Pattern":
+		mesh.set_surface_material(0, preload("res://Assets/Shaders/player_skins.tres").duplicate())
+		mesh.get_surface_material(0).set_shader_param("albedo", primary.main_color)
+		mesh.get_surface_material(0).set_shader_param("albedo_secondary", secondary.main_color)
+		return
+		
 	if modded_species.find(species) != -1:
-		#print("found modded species with index "+index)
-		var variant = pattern.body_pattern[index+1]
+		var variant
+		if len(pattern.body_pattern) <= index+1:
+			variant = pattern.body_pattern[len(pattern.body_pattern) - 1]
+		else: 
+			variant = pattern.body_pattern[index+1]
+	
 		if variant:
-			print(PREFIX+"Assigned variant "+index+" to species "+species)
-			var material = mesh.material_override
-			material.shader = BODY_COLORS_SHADER
-			mesh.material_override.set_shader_param("texture_albedo", variant)
+			mesh.set_surface_material(0, preload("res://Assets/Shaders/player_skins.tres").duplicate())
+			mesh.get_surface_material(0).set_shader_param("albedo", primary.main_color)
+			mesh.get_surface_material(0).set_shader_param("albedo_secondary", secondary.main_color)
+			mesh.get_surface_material(0).set_shader_param("texture_albedo", variant)
 			return
 	#if there isn't a texture assigned to the species for this pattern we just
 	#make it solid color
-	mesh.material_override.set_shader_param("texture_albedo", null)
-	#print("running fallback texture")
+	mesh.get_surface_material(0).set_shader_param("albedo", primary.main_color)
+	mesh.get_surface_material(0).set_shader_param("albedo_secondary", secondary.main_color)
+	print("running fallback texture")
 
 func _custom_species_faces(player:AnimationPlayer,species_id:String):
 	var animation = Lure.animation_buffer[species_id]
