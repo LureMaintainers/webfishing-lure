@@ -17,17 +17,14 @@ const SAVE_TEMPLATE = {
 
 func _custom_species_patterns(mesh:MeshInstance,pattern:CosmeticResource,species:String,primary:Object,secondary:Object):
 	var modded_species:Array = Lure.modded_species
-	var global_variant
 	var index = modded_species.find(species)
 	# shit fucking hack for any idiot who uses no pattern
-	print("first primary color: ", primary, " second primary color: ", secondary)
 	if pattern.name == "No Pattern":
 		mesh.set_surface_material(0, preload("res://Assets/Shaders/player_skins.tres").duplicate())
 		mesh.get_surface_material(0).set_shader_param("albedo", primary.main_color)
 		mesh.get_surface_material(0).set_shader_param("albedo_secondary", secondary.main_color)
 		return
 		
-	print(species, pattern)
 	if modded_species.find(species) != -1:
 		var variant
 		if len(pattern.body_pattern) <= index+1:
@@ -36,18 +33,10 @@ func _custom_species_patterns(mesh:MeshInstance,pattern:CosmeticResource,species
 			variant = pattern.body_pattern[index+1]
 	
 		if variant:
-
 			mesh.set_surface_material(0, preload("res://Assets/Shaders/player_skins.tres").duplicate())
-			
 			mesh.get_surface_material(0).set_shader_param("albedo", primary.main_color)
 			mesh.get_surface_material(0).set_shader_param("albedo_secondary", secondary.main_color)
-			
 			mesh.get_surface_material(0).set_shader_param("texture_albedo", variant)
-			print("variant")
-			#var material = mesh.material_override
-			#material.shader = BODY_COLORS_SHADER
-			#global_variant = variant
-			#mesh.material_override.set_shader_param("texture_albedo", variant)
 			return
 	#if there isn't a texture assigned to the species for this pattern we just
 	#make it solid color
