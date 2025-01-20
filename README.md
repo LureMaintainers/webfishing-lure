@@ -2,6 +2,9 @@
   <img src="https://raw.githubusercontent.com/Sulayre/WebfishingLure/refs/heads/main/icon.png" alt="Lure Shrimp"/>
 </p>
 
+## 4.3.1
+- Bug where heads of species were white is fixed. ( yeeter )
+
 ## 4.3.0
 - Update Lure's supported game version.
 - Fixed issues with SteamNetwork.
