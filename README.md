@@ -84,15 +84,15 @@ To access Lure's functions in your code, add the following line at the start of 
 *(this way you can access all of it's functions listed below in the Documentation)*
 
 # Documentation  
-- [Loading Assets](https://github.com/Sulayre/WebfishingLure/blob/main/README.md#loading-assets-with-lure)
-- [Ready Functions](https://github.com/Sulayre/WebfishingLure/blob/main/README.md#initialization-functions-make-sure-you-call-these-functions-on-the-_ready-function-of-your-modgd)
-  - [Custom Species Voices and Faces](https://github.com/Sulayre/WebfishingLure/blob/main/README.md#custom-species)
-  - [Clothing Meshes and Pattern Textures](https://github.com/Sulayre/WebfishingLure/blob/main/README.md#cosmetics)
-  - [Setting Up Props](https://github.com/Sulayre/WebfishingLure/blob/main/README.md#props)
-  - [Item Behavior](https://github.com/Sulayre/WebfishingLure/blob/main/README.md#items)
-  - [Adding Maps](https://github.com/Sulayre/WebfishingLure/blob/main/README.md#maps)
-  - [Adding Items, Props and Cosmetics/Species](https://github.com/Sulayre/WebfishingLure/blob/main/README.md#loading-the-items-props-and-cosmetics)
-- [Utility Functions](https://github.com/Sulayre/WebfishingLure/blob/main/README.md#utility-functions)
+- [Loading Assets](https://github.com/LureMaintainers/WebfishingLure/blob/main/README.md#loading-assets-with-lure)
+- [Ready Functions](https://github.com/LureMaintainers/WebfishingLure/blob/main/README.md#initialization-functions-make-sure-you-call-these-functions-on-the-_ready-function-of-your-modgd)
+  - [Custom Species Voices and Faces](https://github.com/LureMaintainers/WebfishingLure/blob/main/README.md#custom-species)
+  - [Clothing Meshes and Pattern Textures](https://github.com/LureMaintainers/WebfishingLure/blob/main/README.md#cosmetics)
+  - [Setting Up Props](https://github.com/LureMaintainers/WebfishingLure/blob/main/README.md#props)
+  - [Item Behavior](https://github.com/LureMaintainers/WebfishingLure/blob/main/README.md#items)
+  - [Adding Maps](https://github.com/LureMaintainers/WebfishingLure/blob/main/README.md#maps)
+  - [Adding Items, Props and Cosmetics/Species](https://github.com/LureMaintainers/WebfishingLure/blob/main/README.md#loading-the-items-props-and-cosmetics)
+- [Utility Functions](https://github.com/LureMaintainers/WebfishingLure/blob/main/README.md#utility-functions)
 
 ## Loading assets with Lure
 Lure allows you to load asset paths with 3 different prefixes:
@@ -113,7 +113,7 @@ Lure allows you to load asset paths with 3 different prefixes:
 
 **Lure.assign_species_voice(``your_mod_id``, ``species_id``,  ``bark_sound_path``, ``growl_sound_path``, ``whine_sound_path``)**<br>Allows you to assign bark, growl and whine sounds to a specific species, growl and whine are optional, if any of the two are missing they'll get assigned the bark sound.
 
-**Lure.assign_face_animation(``your_mod_id``, ``species_id``, ``animation_path``)**<br>Allows you to assign a face offsets animation to a modded species, so you can adjust the eye, mouth and nose positions. You can make and edit offset animations by selecting the ![](https://cdn.discordapp.com/attachments/1297612591656341504/1298879143223492638/image.png?ex=671b2af7&is=6719d977&hm=699e55dfbba034a17cd1a99603bfa7ede9e09724e0020b5fb839ee36b70f04cd&) node inside the ``player_face.tscn`` scene that you can find in the ``res://Scenes/Entities/Player/Face`` folder when opening the decompiled game with the godot editor, then select either the ``cat_face`` or the ``dog_face`` animation in the animation timeline tab, click the ![](https://cdn.discordapp.com/attachments/1297612591656341504/1298877917744467968/image.png?ex=671b29d3&is=6719d853&hm=36fb587d5024508e25ee7379c4866228d78b3cee91932936c788e3aa6b98cd7b&) button and select 'Duplicate', name your new animation and save with "OK". After you're done editing the offsets, click ![](https://cdn.discordapp.com/attachments/1297612591656341504/1298877917744467968/image.png?ex=671b29d3&is=6719d853&hm=36fb587d5024508e25ee7379c4866228d78b3cee91932936c788e3aa6b98cd7b&) again and select "Save As", this is the file you'll need to load with the function.
+**Lure.assign_face_animation(``your_mod_id``, ``species_id``, ``animation_path``)**<br>Allows you to assign a face offsets animation to a modded species, so you can adjust the eye, mouth and nose positions. You can make and edit offset animations by selecting the node inside the ``player_face.tscn`` scene that you can find in the ``res://Scenes/Entities/Player/Face`` folder when opening the decompiled game with the godot editor, then select either the ``cat_face`` or the ``dog_face`` animation in the animation timeline tab, click the button and select 'Duplicate', name your new animation and save with "OK". After you're done editing the offsets, click again and select "Save As", this is the file you'll need to load with the function.
 
 ### Cosmetics
 
