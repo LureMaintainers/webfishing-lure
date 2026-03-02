@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Sulayre/WebfishingLure/refs/heads/main/icon.png" alt="Lure Shrimp"/>
+  <img src="https://raw.githubusercontent.com/LureMaintainers/WebfishingLure/refs/heads/main/icon.png" alt="Lure Shrimp"/>
 </p>
 
 ## 4.3.1
