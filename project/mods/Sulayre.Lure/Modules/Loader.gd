@@ -16,7 +16,7 @@ func _register_resource(resource_data:Dictionary):
 	var dir = Directory.new()
 	var mod_id = resource_data.mod
 	var item_id = resource_data.id
-	var final_id = mod_id+"."+item_id
+	var final_id = ".".join([mod_id, item_id]) if mod_id is String and not mod_id.empty() else item_id
 	var res_path = Lure.Util._mod_path_converter(mod_id,resource_data.file)
 	
 	match dir.open("res://mods/"+mod_id):
@@ -33,7 +33,7 @@ func _register_resource(resource_data:Dictionary):
 					var owned = false
 					match loaded_resource.category:
 						"furniture":
-							loaded_resource.prop_code = mod_id + "." + loaded_resource.prop_code
+							loaded_resource.prop_code = final_id
 						"tool":
 							pass
 					#else:
