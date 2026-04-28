@@ -100,7 +100,7 @@ namespace Sulayre.Lure.Patches
 				{
 					yield return token;
 
-					// if get_node("/root/SulayreLure")._call_action(item_data.action,item_data.action_params): return
+					// if get_node("/root/SulayreLure/Patches")._call_action(item_data.action,item_data.action_params): return
 					yield return new Token(TokenType.CfIf);
 
 					yield return new IdentifierToken("get_node");
@@ -132,7 +132,7 @@ namespace Sulayre.Lure.Patches
 
 					yield return new Token(TokenType.Newline, 1);
 
-					// if get_node("/root/SulayreLure")._call_action(item_data.action): return
+					// if get_node("/root/SulayreLure/Patches")._call_action(item_data.action): return
 					yield return new Token(TokenType.CfIf);
 					yield return new IdentifierToken("get_node_or_null");
 					yield return new Token(TokenType.ParenthesisOpen);
